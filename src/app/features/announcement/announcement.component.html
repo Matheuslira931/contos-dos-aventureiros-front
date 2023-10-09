@@ -1,0 +1,17 @@
+<app-header (methodName)="filterAd($event)"></app-header>
+<div class="container">
+  <div class="positons-ads" *ngFor="let anuncio of returnListed">
+    <app-card-ad
+      imgCard="{{ anuncio.imagem }}"
+      titleCard="{{ anuncio.anuncio.nome }}"
+      priceCard="{{ anuncio.anuncio.preco }}"
+      locationCard="{{ anuncio.anuncio.estado }}"
+      regionCard="{{ anuncio.anuncio.cidade }}"
+      installmentCard="{{ installment }}"
+      dateCard="{{ anuncio.anuncio.data_criacao }}"
+      tagCard="{{ anuncio.anuncio.estado_componente }}"
+      (click)="enterAd()"
+    ></app-card-ad>
+  </div>
+</div>
+

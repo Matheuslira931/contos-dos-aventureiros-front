@@ -14,7 +14,6 @@ import { ButtonsModule } from 'src/app/shared/componets/buttons/buttons.module';
 import { CardModule } from 'src/app/shared/componets/card/card.module';
 import { HeaderModule } from 'src/app/shared/componets/header/header.module';
 import { IconModule } from 'src/app/shared/componets/icons/icon.module';
-import { TagsModule } from 'src/app/shared/componets/tags/tags.module';
 import { AnnouncementRouting } from './announcement-routing.module';
 import { AnnouncementComponent } from './announcement.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
@@ -49,7 +48,6 @@ import { BottomBarModule } from 'src/app/shared/componets/bottom-bar/bottom-bar.
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
-    TagsModule,
     MatIconModule,
     NgxMaskModule.forRoot()
   ]

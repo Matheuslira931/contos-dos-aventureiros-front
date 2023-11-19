@@ -8,11 +8,11 @@ export const AppRoutingModule: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./features/home/home.module').then((m) => m.HomeModule)
+        loadChildren: () => import('./features/album/album.module').then((m) => m.AlbumModule)
       },
       {
-        path: 'anuncios',
-        loadChildren: () => import('./features/announcement/announcement.module').then((m) => m.AnnouncementModule)
-      },
+        path: 'auth',
+        loadChildren: () => import('./features/home/home.module').then((m) => m.HomeModule)
+      }
   ]}
 ];

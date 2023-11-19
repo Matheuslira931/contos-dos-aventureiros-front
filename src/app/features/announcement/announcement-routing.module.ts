@@ -7,7 +7,7 @@ import { ThisAnnouncementComponent } from './this-announcement/this-announcement
 
 export const AnnouncementRouting: Routes = [
   {
-    path: '',
+    path: 'anuncio',
     component: AnnouncementComponent,
   },
   {
@@ -23,7 +23,7 @@ export const AnnouncementRouting: Routes = [
     component: NewAnnouncementComponent,
   },
   {
-    path: 'anuncio',
+    path: 'anuncios',
     component: ThisAnnouncementComponent,
   },
   {

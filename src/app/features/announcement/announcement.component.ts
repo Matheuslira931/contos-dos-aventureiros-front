@@ -32,13 +32,6 @@ export class AnnouncementComponent implements OnInit {
     });
   }
 
-  filterAd(event: any) {
-    if (event === '') {
-      this.returnListed = this.returnListAd;
-    }
-    this.returnListed = event;
-  }
-
   enterAd(): void {
     alert();
     this.router.navigate(['/your-route']);

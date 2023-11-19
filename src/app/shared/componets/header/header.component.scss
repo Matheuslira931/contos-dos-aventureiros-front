@@ -1,0 +1,84 @@
+@import "../../../../assets/styles/variable-module.scss";
+
+nav {
+  z-index: 1;
+}
+
+.position-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: $main-color-btn;
+
+  .align-logos {
+    display: flex;
+  }
+
+  .left-area {
+    gap: 20px;
+  }
+
+  .logo_navbar_name {
+    width: 100%;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .alination-country {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .icon-search {
+      position: absolute;
+      top: 26px;
+      right: auto;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .input-search {
+      width: auto;
+      max-width: 100%;
+      height: 40px;
+      background-color: $bg-icon;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      line-height: 20px;
+      padding-left: 10px;
+      padding-right: 20px;
+      border-radius: 28px;
+      -webkit-border-radius: 28px;
+      -moz-border-radius: 28px;
+      -ms-border-radius: 28px;
+      -o-border-radius: 28px;
+    }
+  }
+}
+
+::ng-deep .icon-dropdown-menu {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 40.063em) {
+  .input-search {
+    width: 480px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+
+  .icon-search {
+    margin-right: 20px;
+  }
+}

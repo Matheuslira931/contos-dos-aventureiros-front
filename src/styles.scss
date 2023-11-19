@@ -1,0 +1,92 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$contosAventureiro-primary: mat.define-palette(mat.$indigo-palette);
+$contosAventureiro-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$contosAventureiro-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$contosAventureiro-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $contosAventureiro-primary,
+      accent: $contosAventureiro-accent,
+      warn: $contosAventureiro-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($contosAventureiro-theme);
+
+@import 'assets/styles/grid.scss';
+@import 'assets/styles/variable-module.scss';
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dailog-login {
+  width: 370px;
+}
+
+.dailog-sign {
+  width: 850px;
+}
+
+.btn-modal-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 176px;
+  height: 52px;
+  background: #F64740;
+  color: #fcfcfc;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: all .3s ease 0s;
+}
+
+.btn-modal-auth:hover {
+  background: #fcfcfc;
+  color: #F64740;
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(246, 71, 64,.4);
+  transform: translateY(-4px);
+}

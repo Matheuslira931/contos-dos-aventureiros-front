@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: "https://lover-computer.blockchainone.com.br",
+  rawAPI: "https://lover-computer.blockchainone.com.br"
 };
 
 /*

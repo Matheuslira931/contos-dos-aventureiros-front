@@ -1,0 +1,39 @@
+import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { ModalLoginComponent } from 'src/app/shared/componets/modal/modal-login/modal-login.component';
+import { ModalSignComponent } from 'src/app/shared/componets/modal/modal-sign/modal-sign.component';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+
+  constructor(public dialog: MatDialog) {}
+
+  openLogin() {
+    const dialogRef = this.dialog.open(ModalLoginComponent, {
+      panelClass: "dailog-login"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openSign() {
+    const dialogRef = this.dialog.open(ModalSignComponent, {
+      panelClass: "dailog-sign"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  ngOnInit(): void {
+  }
+
+}

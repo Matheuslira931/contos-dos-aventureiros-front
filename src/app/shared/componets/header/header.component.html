@@ -1,0 +1,26 @@
+<div class="position-header">
+  <div class="left-area alination-country">
+    <a href="/" class="align-logos">
+      <img class="logo_navbar_name" src="./assets/img/logo.png" alt="brand header"/>
+    </a>
+    <div class="input-container">
+      <fa-icon class="icon-search"
+        [icon]="['fas', 'magnifying-glass']">
+      </fa-icon>
+      <form [formGroup]="searchForm">
+        <input
+          class="input-search"
+          formControlName="inputSearch"
+          id="search"
+          (keyup)="search()"
+          autocomplete="off"
+          matInput
+          name="inputSearch"
+          placeholder="Qual historia quer ouvir?"
+          type="text" />
+      </form>
+    </div>
+  </div>
+</div>
+
+

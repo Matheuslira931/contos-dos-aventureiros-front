@@ -1,3 +1,6 @@
+@import './../../../assets/styles/variable-module.scss';
+
+
 .background-screen {
   display: flex;
   flex-direction: row;
@@ -15,13 +18,8 @@
     .position-style {
       text-align: center;
       .style-gif {
-        width: 80px;
-        height: 100%;
-        border-radius: 100%;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        -o-border-radius: 100%;
+        width: 100%;
+        height: 80px;
       }
       .sytle-welcome {
         font-size: 2.2rem;
@@ -29,7 +27,11 @@
         line-height: 1em;
         .love-computer {
           font-weight: 600;
-          color: #F64740
+          color: $pri-color-font
+        }
+        .love-computer2 {
+          @extend .love-computer;
+          color: $sec-color-font;
         }
       }
     }
@@ -40,10 +42,7 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      .btnDefault {
-        width: 150px;
-        margin: 0 15px;
-      }
+      gap: 20px;
     }
   }
 }

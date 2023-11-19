@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
+import { ButtonsModule } from 'src/app/shared/componets/buttons/buttons.module';
 import { ModalModule } from 'src/app/shared/componets/modal/modal.module';
 import { HomeRouting } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -19,7 +20,8 @@ import { HomeComponent } from './home.component';
     ModalModule,
     MatCardModule,
     MatButtonModule,
-    RouterModule.forChild(HomeRouting)
+    RouterModule.forChild(HomeRouting),
+    ButtonsModule
   ]
 })
 export class HomeModule { }

@@ -1,27 +1,26 @@
+@import './../../../../../assets/styles/variable-module.scss';
 
 .title-login {
   font-weight: 500;
   font-size: 40px;
   line-height: 52px;
-  color: #001E2D;
-
+  color: $title-color-font;
 }
 
 .description-login {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #6F7975;
+  color: $for-color-font;
 }
 
 form {
   margin: 20px 0;
 }
 
-
 .to-login {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #F64740;
+  color: $pri-color-font;
 }

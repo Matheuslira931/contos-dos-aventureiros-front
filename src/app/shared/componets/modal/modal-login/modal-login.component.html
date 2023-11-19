@@ -12,7 +12,11 @@
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
-  <button class="btn-modal-auth" (click)="logar()">LOGAR</button>
+  <app-button-background
+    editStyle="backgroundFull"
+    content="Cadastrar"
+    (click)="logar()">
+  </app-button-background>
 </form>
 <a class="to-login" (click)="redirect_auth()" >Ainda não tem conta? Cadastre-se</a>
 

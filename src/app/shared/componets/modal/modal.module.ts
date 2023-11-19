@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { ModalLoginComponent } from './modal-login/modal-login.component';
 import { ModalSignComponent } from './modal-sign/modal-sign.component';
+import { ButtonsModule } from '../buttons/buttons.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ModalSignComponent } from './modal-sign/modal-sign.component';
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    ButtonsModule
   ],
   exports: [
     ModalLoginComponent,

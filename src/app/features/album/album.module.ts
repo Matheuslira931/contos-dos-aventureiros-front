@@ -5,11 +5,13 @@ import { BottomBarModule } from 'src/app/shared/componets/bottom-bar/bottom-bar.
 import { HeaderModule } from 'src/app/shared/componets/header/header.module';
 import { AlbumRouting } from './album-routing.module';
 import { AlbumComponent } from './album.component';
+import { ListComponent } from './list/list.component';
 
 
 @NgModule({
   declarations: [
-    AlbumComponent
+    AlbumComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,

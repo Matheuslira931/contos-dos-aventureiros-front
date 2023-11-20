@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { GlobalService } from 'src/app/core/services/global.service';
 import { ModalLoginComponent } from '../modal/modal-login/modal-login.component';
 import { ModalSignComponent } from '../modal/modal-sign/modal-sign.component';
+import { ModalCreateAlbumComponent } from '../modal/modal-create-album/modal-create-album.component';
 
 @Component({
   selector: 'app-bottom-bar',
@@ -48,9 +49,20 @@ export class BottomBarComponent implements OnInit {
     });
   }
 
+  newAlbum() {
+    const dialogRef = this.dialog.open(ModalCreateAlbumComponent, {
+      panelClass: "dailog-login"
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
   goEditProfile() {
     this.router.navigate(['/editar-perfil']);
   }
+
 
   exit() {
     localStorage.removeItem('tokenUser');

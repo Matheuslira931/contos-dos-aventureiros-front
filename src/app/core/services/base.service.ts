@@ -13,7 +13,7 @@ export class BaseService {
   protected headers(isFormData = false, extraOptions:any = {}): HttpHeaders {
 
     let result: any = {
-      "Content-Type": "application/json",
+      "Content-Type": "multipart/form-data",
       "Accept": "application/json",
       "Access-Control-Allow-Origin": "*",
     };
@@ -59,7 +59,7 @@ export class BaseService {
   createResource(data:any, params:any = {}, extraOptions: any = {}) {
 
     let isFormData = false;
-    
+
     if (data instanceof FormData) {
       isFormData = true;
     }

@@ -1,0 +1,20 @@
+<p class="title-login">Crie um Álbum</p>
+<form [formGroup]="creatAlbum">
+  <mat-form-field appearance="outline" class="ui-sm-12 ui-md-12 ui-g-12">
+    <mat-label>Título</mat-label>
+    <input matInput type="text" formControlName="inputTitle" />
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="ui-sm-12 ui-md-12 ui-g-12">
+    <mat-label>Descrição</mat-label>
+    <input matInput type="text" formControlName="inputDescription" />
+  </mat-form-field>
+  <div class="ui-sm-12 ui-md-12 ui-g-12">
+    <mat-label>Imagem</mat-label>
+    <input type="file" (change)="onFileSelected($event)" />
+  </div>
+  <app-button-background
+    editStyle="backgroundFull"
+    content="Criar album"
+    (click)="createAlbum()">
+  </app-button-background>
+</form>

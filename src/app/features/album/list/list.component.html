@@ -1,1 +1,4 @@
-<p>list works!</p>
+<div class="list-container">
+  <app-album-card *ngFor="let album of returnListed" imgCard="{{ album.imagem }}" titleCard="{{ album.titulo }}"
+    descriptionCard="{{ album.descricao }}" (click)="enterAd()"></app-album-card>
+</div>

@@ -11,11 +11,13 @@ import { RouterModule } from '@angular/router';
 import { ModalLoginComponent } from './modal-login/modal-login.component';
 import { ModalSignComponent } from './modal-sign/modal-sign.component';
 import { ButtonsModule } from '../buttons/buttons.module';
+import { ModalCreateAlbumComponent } from './modal-create-album/modal-create-album.component';
 
 @NgModule({
   declarations: [
     ModalLoginComponent,
-    ModalSignComponent
+    ModalSignComponent,
+    ModalCreateAlbumComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { ButtonsModule } from '../buttons/buttons.module';
   ],
   exports: [
     ModalLoginComponent,
-    ModalSignComponent
+    ModalSignComponent,
+    ModalCreateAlbumComponent
   ]
 })
 export class ModalModule { }

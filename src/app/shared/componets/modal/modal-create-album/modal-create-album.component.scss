@@ -1,0 +1,12 @@
+@import './../../../../../assets/styles/variable-module.scss';
+
+.title-login {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  color: $title-color-font;
+}
+
+form {
+  margin: 20px 0;
+}

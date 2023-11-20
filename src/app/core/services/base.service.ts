@@ -13,7 +13,7 @@ export class BaseService {
   protected headers(isFormData = false, extraOptions:any = {}): HttpHeaders {
 
     let result: any = {
-      "Content-Type": "multipart/form-data",
+      "Content-Type": "application/json",
       "Accept": "application/json",
       "Access-Control-Allow-Origin": "*",
     };

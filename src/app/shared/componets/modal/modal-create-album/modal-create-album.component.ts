@@ -46,7 +46,7 @@ export class ModalCreateAlbumComponent implements OnInit {
     this.globalService.createResource(formData).subscribe({
       next: (response:any) => {
         this.dialog.closeAll();
-        this.router.navigateByUrl('/');
+        window.location.reload();
       },
       error: (response) => console.log("deu ruim", formData),
     }

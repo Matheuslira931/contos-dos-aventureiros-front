@@ -1,12 +1,12 @@
 @import "../../../../../assets/styles/variable-module.scss";
 .card-album {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   max-width: 100%;
   flex: 1 1 0%;
   position: relative;
-  padding: 16px 16px 16px 0px;
+  padding: 16px;
   align-items: center;
   cursor: pointer;
   background-color: #f6f6f6;
@@ -59,6 +59,11 @@
         line-height: 1.32;
         font-weight: 500;
         text-transform: lowercase;
+      }
+      .description {
+        @extend .title-album;
+        font-weight: 400;
+        font-size: 14px;
       }
       .price-album {
         font-size: 20px;

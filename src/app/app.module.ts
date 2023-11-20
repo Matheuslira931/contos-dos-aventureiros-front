@@ -8,7 +8,6 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GlobalService } from './core/services/global.service';
-import { AnnouncementModule } from './features/announcement/announcement.module';
 import { HomeModule } from './features/home/home.module';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { HomeModule } from './features/home/home.module';
     BrowserAnimationsModule,
     HttpClientModule,
     HomeModule,
-    AnnouncementModule,
     FormsModule,
     RouterModule.forRoot(AppRoutingModule)
   ],

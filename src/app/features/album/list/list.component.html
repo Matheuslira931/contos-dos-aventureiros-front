@@ -1,4 +1,4 @@
 <div class="list-container">
   <app-album-card *ngFor="let album of returnListed" imgCard="{{ album.imagem }}" titleCard="{{ album.titulo }}"
-    descriptionCard="{{ album.descricao }}" (click)="enterAd()"></app-album-card>
+    descriptionCard="{{ album.descricao }}" (click)="enterAd(album.id)"></app-album-card>
 </div>

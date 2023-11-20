@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://lover-computer.blockchainone.com.br",
-  rawAPI: "https://lover-computer.blockchainone.com.br"
+  apiUrl: "http://127.0.0.1:8000",
+  rawAPI: "http://127.0.0.1:8000"
 };
 
 /*

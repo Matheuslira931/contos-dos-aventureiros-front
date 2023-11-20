@@ -13,6 +13,7 @@ import { GlobalService } from './../../../../core/services/global.service';
 export class ModalSignComponent implements OnInit {
 
   hide = true;
+  signed= true;
   public signForm! : FormGroup;
 
   constructor(public router : Router, public globalService: GlobalService, public dialog: MatDialog) { }
@@ -43,9 +44,10 @@ export class ModalSignComponent implements OnInit {
     this.globalService.entityName = 'api/criar-usuario';
     this.globalService.createResource(request).subscribe({
       next: (response:any) => {
-        localStorage.setItem("token", response.token);
+        localStorage.setItem("id", response.id);
+        localStorage.setItem("signed", JSON.stringify(this.signed));
         this.dialog.closeAll();
-        this.router.navigateByUrl('/anuncios');
+        this.router.navigateByUrl('/');
       },
       error: (response) => console.log("deu ruim", request),
     }

@@ -44,7 +44,7 @@ export class ModalLoginComponent implements OnInit{
         localStorage.setItem("tokenUser", JSON.stringify(response));
         localStorage.setItem("onlyToken", JSON.stringify(response.token));
         this.dialog.closeAll();
-        this.router.navigateByUrl('/anuncios');
+        this.router.navigateByUrl('/');
       },
       error: (response) => console.log("deu ruim", request),
     }

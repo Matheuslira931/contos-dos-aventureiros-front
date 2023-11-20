@@ -1,0 +1,11 @@
+<form [formGroup]="editForm">
+  <mat-form-field appearance="outline" class="ui-g-12">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" formControlName="inputName" />
+  </mat-form-field>
+  <app-button-background
+    editStyle="backgroundFull"
+    content="Alterar"
+    (click)="editProfile()">
+  </app-button-background>
+</form>

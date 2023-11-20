@@ -26,10 +26,6 @@ export const AnnouncementRouting: Routes = [
     path: 'anuncios',
     component: ThisAnnouncementComponent,
   },
-  {
-    path: 'editar-perfil',
-    component: EditProfileComponent,
-  }
 ];
 
 

@@ -23,8 +23,8 @@ export class BottomBarComponent implements OnInit {
   }
 
   getTokenUser() {
-    if (localStorage.getItem('tokenUser')) {
-      this.userLogged = localStorage.getItem('tokenUser');
+    if (localStorage.getItem('onlyToken') || localStorage.getItem("signed")) {
+      this.userLogged = localStorage.getItem('onlyToken') || localStorage.getItem("signed");
     }
   }
 
@@ -55,6 +55,7 @@ export class BottomBarComponent implements OnInit {
   exit() {
     localStorage.removeItem('tokenUser');
     localStorage.removeItem('onlyToken');
+    localStorage.removeItem('signed');
     this.router.navigate(['/auth']);
   }
 
